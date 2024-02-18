@@ -1,0 +1,62 @@
+using System;
+Console.WriteLine("Triangle check");
+Console.WriteLine("First:");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Second:");
+int b = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Third:");
+int c = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Your triangle");
+float d = 0;
+float g = a+b+c;
+if (a<b+c & b<c+a & c<a+b)
+{
+    Console.WriteLine("exist");
+    d=1;
+} 
+else
+{
+    Console.WriteLine("does not exist");
+    d=2;
+}
+if (d==1)
+{
+    
+    Console.WriteLine("Perimetr:" + g);
+}
+else
+{
+    Console.WriteLine("...");
+}
+double p = (a+b+c)/2.0;
+double s = Math.Sqrt(p*(p-a)*(p-b)*(p-c));
+if (d==1)
+{
+    Console.WriteLine("Square:" + s);
+}
+
+double cos = Math.Pow(a,2)+Math.Pow(b,2)-Math.Pow(c,2)/2*a*b;
+if (d==1)
+{
+    if (cos==0)
+{
+    Console.WriteLine("Right triangle");
+}
+    else if(cos<0)
+{
+    Console.WriteLine("Obtuse triangle");
+}
+    else if(cos>0)
+{
+    Console.WriteLine("Acute triangle");
+}
+    else
+{
+    Console.WriteLine("...");
+}
+}
+else 
+{
+    Console.WriteLine("...");
+}
+Console.WriteLine("by RamAtom124");
